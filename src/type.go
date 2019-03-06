@@ -7,7 +7,8 @@ import (
 
 type Element struct {
 	elementNode
-	key,Value interface{}
+	key float64
+	Value interface{}
 }
 
 type elementNode struct {
@@ -16,9 +17,9 @@ type elementNode struct {
 
 type SkipList struct {
 	elementNode
-	level int
-	length int
-	randSource rand.Source
+	level          int
+	length         int
+	randSource     rand.Source
 	probability    float64
 	probTable      []float64
 	mutex          sync.RWMutex
